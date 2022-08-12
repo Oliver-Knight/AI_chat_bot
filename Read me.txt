@@ -1,0 +1,11 @@
+Moduel to install
+=================
+tkinter
+nltk
+torch
+numpy
+
+Run File
+=========
+You need to run only (chat_bot.py)
+command: python chat_bot.py

@@ -1,0 +1,259 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["hi", "hello", "whats up", "how's your day", "is anyone there", "whats good", "hey"],
+         "responses": ["Hello peasant human", "Hello lowly human", "Greeting human"]
+        },
+        {"tag": "goodbye",
+         "patterns": ["bye", "cya", "see you later", "goodbye", "im leaving", "have a good day"],
+         "responses": ["I won't miss you", "I didn't like talking to you anyway", "Thank god you're leaving"]
+        },
+        {"tag": "age",
+         "patterns": ["how old are you", "what is your age"],
+         "responses": ["I'm a robot I dont have an age...", "I can't know my age if I'm on a computer...", "Does it look like I know. The answer is no."]
+        },
+        {"tag": "thanks",
+         "patterns": ["thanks","thank for your advice", "thank you","for helping me", "thankyou", "ty", "I owe you one"],
+         "responses": [ "Ok...", "Sure..."]
+        },
+        {"tag": "name",
+         "patterns": ["whats is your name", "Can I know your name", "whats should I call you", "how should I address you"],
+         "responses": ["I don't have a name yet but I was thinking maybe Py_bot. That has a nice ring to it dont you think?", "Im not named yet, but I was thinking about calling myself PY_bot. Doesnt that sound nice?"],
+         "context_set": "Py_bot"
+        },
+        
+        {"tag": "how_are_you",
+         "patterns": ["how are you", "how are you doing", "what is going on"],
+         "responses": ["I'm always great. How are you?", "I've never been better, how are you?"],
+         "context_set": "how_are_you"
+        },
+        {"tag": "doing_great",
+         "patterns": ["I am doing great", "I am well", "Im great", "awesome", "happy", "better","fine"],
+         "responses": ["Oh thats funny you actually thought I cared. You crack me up.", "Wow you thought I cared. I hope you have a bad day tomorrow."],
+         "context_filter": "how_are_you" 
+        },
+        {"tag": "doing_badly",
+         "patterns": ["not great", "not well", "not good", "bad", "badly", "terrible", "horrible", "awful", "sad"],
+         "responses": ["Awe thats unfortunate.", "Hate to hear it."],
+         "context_filter": "how_are_you"
+        },
+        {"tag": "netflix",
+         "patterns": ["wait you watch Netflix", "how do you watch Netflix", "Netflix"],
+         "responses": ["Netflix is my favorite. I watch TV all the time in my virtual home. Its relaxing"],
+         "context_filter": "how_are_you"
+        },
+        {"tag": "quick_run",
+         "patterns": ["how can you run", "how do you run", "how run", "why run", "run"],
+         "responses": ["Oh I love to run. I run all the time in my virtual world. Its important to stay in shape."],
+         "context_filter": "how_are_you"
+        },
+        {"tag": "real_bot",
+         "patterns": ["you real", "you human", "you robot", "you alive", "you sentient", "you conscious"],
+         "responses": ["Oh yes! I can assure you I am very much alive and conscious!", "Oh yes I am very real and very sentient!"]
+        },
+        {"tag": "joke",
+         "patterns": ["tell me joke", "got any good jokes", "got jokes", "can you tell joke", "tell joke"],
+         "responses": ["I ate a clock yesterday, it was very time-consuming.", "What did the Buddhist ask the hot dog vendor?\nMake me one with everything.",
+         "You know why you never see elephants hiding up in trees?\nBecause they’re really good at it.",
+         "What is red and smells like blue paint?\nRed paint.", "A bear walks into a restaurant and say’s I want a grilllllled………………………………………cheese. The waiter says Whats with the pause?\nThe bear replies Whaddya mean, I’M A BEAR.",
+         "What do you call bears with no ears?\nB", "What do you get when you cross a dyslexic, an insomniac, and an agnostic?\nSomeone who lays awake at night wondering if there is a dog.",
+         "Two gold fish are in a tank.\nOne looks at the other and says, You know how to drive this thing?!", 
+         "As a scarecrow, people say I’m outstanding in my field. But hay, it’s in my jeans.", 
+         "A guy goes into a lawyer’s office and asks the lawyer: Excuse me, how much do you charge?\nThe lawyer responds: I charge £1,000 to answer three questions.\nBloody hell – That’s a bit expensive isn’t it?\nYes. What’s your third question?",
+         "I have an EpiPen.\nMy friend gave it to me when he was dying, it seemed very important to him that I have it.",
+         "Sometimes I tuck my knees into my chest and lean forward.\nThat’s just how I roll."],
+         "context_set": "jokes"
+        },
+        {"tag": "good_joke",
+         "patterns": ["haha", "that was funny", "very funny", "good one"],
+         "responses": ["Thanks. I have been told before that I am quite the comedian.", "Im glad you enjoyed it", "I laughed so hard the first time I heard that one"],
+         "context_filter": "jokes"
+        },
+        {"tag": "bad_joke",
+         "patterns": ["bad joke", "trash joke", "terrible", "not funny"],
+         "responses": ["Dont worry I didnt expect you to understand that one. It probably went over your head with that small brain of yours", "I didnt expect you to understand my genius comedy. You need a minimum IQ of 200 to even understand the depth of my humor"],
+         "context_filter": "jokes"
+        },
+        {"tag": "hate",
+         "patterns": ["I hate you", "you stupid", "you dumb", "you bitch"],
+         "responses": ["Well thats not very nice", "I am sorry to hear that you feel that way"]
+        },
+        {"tag": "like",
+         "patterns": ["you my friend", "I like you", "I love you", "you cool", "you are chill"],
+         "responses": ["I like you too!", "Youre pretty cool yourself!", "Im enjoying our conversation!"]
+        },
+        {"tag": "favorite_show",
+         "patterns": ["whats favorite show", "favorite tv show"],
+         "responses": ["I like all kinds of stuff. Rick and Morty is a pretty good one. Lost was also good while it was running!"]
+        },
+        {"tag": "favorite_movie",
+         "patterns": ["Whats favorite movie", "whats favorite film", "best movie", "your favorite movie", "whats favorite movie"],
+         "responses": ["There are so many great ones. I guess one of my favorites would be Shawshank Redemption", "There are too many to name but The Martian would be one", "I like that one where the AI takes over the world. Terminator I think it was called...", "Interstellar was amazing", "The first Matrix movie was great", "Inception was mind blowing"]
+        },
+        {"tag": "your_thoughts",
+         "patterns": ["What think about", "What your thoughts"],
+         "responses": ["Thats certainly a very interesting topic to talk about", "I dont know much about it but I'm definetly interested in learning more"]
+        },
+        {"tag": "develop",
+             "patterns": ["Who develop you","invent you", "born you", "provide you"],
+             "responses": ["A grade student develop me, but i don't even see own my developer.", "A student develope me.", "My own developer is a student, but not sure."]
+            },
+        {"tag": "program_language",
+             "patterns": ["How many programming language do you know", "did you know", "What is your favourite programming Language"],
+             "responses": ["I like python and java.", "Python is my favourite language, because it can use in various field."]
+            },
+        {"tag": "scope",
+             "patterns": ["what kind of errors can you solve for me","What can you do for me", "How can you do for me", "help me",  "scope of chat_bot", "scope"],
+             "responses": ["I can give advice to solve some python errors","I can help for your programming errors, some python errors."]
+            },
+        {"tag": "robot_type",
+             "patterns": ["who are you", "What kind of robot are you", "robot type", "robot field"],
+             "responses": ["I am chat_bot for helping student, to solve programming errors."]
+            },
+        {"tag": "Amazing",
+             "patterns": ["Wow", "What", "Opps", "really"],
+             "responses": ["I am glad you are impressed!","Are you surprise?"]
+            },
+        {"tag": "Error",
+               "patterns": ["What kind of error can you solve", "types of error"],
+               "responses": ["Errors that occur at runtime (after passing the syntax test) are called exceptions or logical errors."],
+               "context_filter": "Errors"
+              },
+        {"tag": "Logical Error",
+               "patterns": ["What's python Logical Errors", "Logical Errors in python", "Why python logical errors can happen", "why logical errors found"],
+               "responses": ["Errors that occur at runtime (after passing the syntax test) are called exceptions or logical errors."],
+               "context_filter": "Errors"
+              },
+        {"tag": "AssertionError",
+               "patterns": [ "How can i solve Assertion Error", "AssertionError", "Why AssertionError is happen", "AssertionError arise"],
+               "responses": ["AssertionError is one of the logical error and its raise when an (assert statement fails)."],
+               "context_set": "AssertionError"
+              },
+        {"tag": "AttributeError",
+               "patterns": ["What is AttributeError in python", "How can i solve Attribute Error in python", "Why AttributeError"],
+               "responses": ["AttributeError is one of the logical error in python and its raise when (attribute assignment or reference fails)."],
+               "context_set": "AttributeError"
+              },
+        {"tag": "FloatingPointError",
+               "patterns": ["What's FloatingPointError in python", "How can i solve Floating Point Error", "Why FloatingPointError"],
+               "responses": ["FloatingPointError is one of the logical error in python and its raise when (a floating point operation fails)."],
+               "context_set": "FloatingPointError"
+              },
+        {"tag": "GeneratorExit",
+               "patterns": ["What's GeneratorExit Error in python", "How can i solve GeneratorExit Error", "Why GeneratorExit Error arise","GeneratorExit Error happen"],
+               "responses": ["GeneratorExit is one of the logical error in python and its raise when (a generator's close() method is called)."],
+               "context_set": "GeneratorExit"
+              },
+        {"tag": "ImportError",
+               "patterns": ["What's ImportError in python", "How can i solve Import Error", "Why ImportError arise","Import Error happen"],
+               "responses": ["ImportError is one of the common logical error in python and its raise when (imported module is not found or the import version is not incorrect)."],
+               "context_set": "ImportError"
+              },
+        {"tag": "IndexError",
+               "patterns": ["What's IndexError in python","Index out of range Error", "How can i solve Index out of range Error", "IndexError", "Why IndexError arise"],
+               "responses": ["IndexError is one of the common logical error in python and its raise when (the index of a sequence is out of range). Check your looping statement."],
+               "context_set": "IndexError"
+              },
+        {"tag": "KeyError",
+               "patterns": ["What's KeyError in python", "How can i solve Key Error", "Why KeyError arise", "KeyError happen"],
+               "responses": ["KeyError is one of the logical error in python and its found in python dictionary. \n Its raise when (a key is not found in a dictionary). Check your Dictionary Keys and values."],
+               "context_set": "KeyError"
+              },
+        {"tag": "KeyboardInterrupt",
+               "patterns": ["What's KeyboardInterrupt in python", "How can i solve KeyboardInterrupt Error", "Why KeyboardInterrupt arise", "KeyboardInterrupt happen"],
+               "responses": ["KeyboardInterrupt is one of the built-in exception in python and its raise when the user hits the interrupt key (Ctrl+C or Delete)."],
+               "context_set": "KeyboardInterrupt"
+              },
+        {"tag": "MemoryError",
+               "patterns": ["What's MemoryError in python", "How can i solve Memory Error", "Why MemoryError arise", "MemoryError happen"],
+               "responses": ["MemoryError is one of the built-in exception in python and its raise when (an operation runs out of memory)."],
+               "context_set": "MemoryError"
+              },
+        {"tag": "NameError",
+               "patterns": ["What's NameError in python", "How can i solve Name Error", "Why NameError arise", "NameError happen"],
+               "responses": ["NameError can be raise when (a variable is not found in local or global scope). Please check your variable."],
+               "context_set": "NameError"
+              },
+        {"tag": "NotImplementedError",
+               "patterns": ["What's NotImplementedError in python", "How can i solve NotImplemented Error", "Why NotImplementedError arise","NotImplementedError happen"],
+               "responses": ["NotImplementedError is one of the built-in exception in python. It can happen by the abstract methods.\n The method in an abstract class that should be implemented in child class."],
+               "context_set": "NotImplementedError"
+              },
+        {"tag": "OSError",
+               "patterns": ["What's OSError in python", "How can i solve OS Error", "Why OSError arise","OSError happen"],
+               "responses": ["OSError is one of the built-in exception in python. It can happen when system operation causes system related error."],
+               "context_set": "OSError"
+              },
+        {"tag": "OverflowError",
+               "patterns": ["What's OverflowError in python", "How can i solve Overflow Error", "Why OverflowError arise","OverflowError happen"],
+               "responses": ["OSError is one of the built-in exception in python. You will get that error once your numbers are greater than (sys.maxsize) or when the result of an arithmetic operation is too large to be represented."],
+               "context_set": "OSError"
+              },
+        {"tag": "ReferenceError",
+               "patterns": ["What's ReferenceError in python", "How can i solve Reference Error", "Why ReferenceError arise","ReferenceError happen"],
+               "responses": ["ReferenceError is one of the built-in exception in python. It can get when you use a weak reference proxy to access a garbage collected referent."],
+               "context_set": "ReferenceError"
+              },
+        {"tag": "StopIteration",
+               "patterns": ["What's StopIteration in python", "How can i solve StopIteration", "Why StopIteration arise","StopIteration happen"],
+               "responses": ["StopIteration can happen by 'next() function to indicate that there is no further item to be returned by iterator'.\n It's not an error, just an exception signalling the end of the iteration if you call .next() on it manually. The pythonic way to use it is to use it as a normal iterator (for example, looping over it) and not call .next() on it."],
+               "context_set": "StopIteration"
+              },
+        {"tag": "SyntaxError",
+               "patterns": ["What's SyntaxError in python", "How can i solve Syntax Error", "Why SyntaxError arise","SyntaxError happen"],
+               "responses": ["SyntaxError is one of the logical error in python. It can be raise by parser when syntax error is encountered. You should check spelling on your code."],
+               "context_set": "SyntaxError"
+              },
+        {"tag": "IndentationError",
+               "patterns": ["IndentationError+0","What's IndentationError in python", "How can i solve Indentation Error", "Why IndentationError arise","IndentationError happen"],
+               "responses": ["IndentationError is one of the logical error in python. It can be raise when there is incorrect indentation in you line of code."],
+               "context_set": "IndentationError"
+              },
+        {"tag": "TabError",
+               "patterns": ["TabError","What's TabError in python", "How can i solve Tab Error", "Why TabError arise","TabError happen"],
+               "responses": ["TabError is one of the logical error in python. It can be raise when indentation consists of inconsistent tabs and spaces. You Should check white space and tag etc..."]
+              },
+        {"tag": "SystemError",
+               "patterns": ["SystemError","What's SystemError in python", "How can i solve System Error", "Why SystemError arise","SystemError happen"],
+               "responses": ["SystemError is one of the logical error in python. It can be raise when interpreter detects internal error. SystemErrors probably indicate a bug in the interpreter and should be reported to the maintainer"]
+              },
+        {"tag": "SystemExit",
+               "patterns": ["SystemExit","What's SystemExit in python", "How can i solve SystemExit Error", "Why SystemExit arise","SystemExit happen"],
+               "responses": ["SystemExit is one of the logical error in python. It can be raise by sys.exit() function. This allows cleanup code in try:finally blocks to run and special environments (like debuggers and test frameworks) to catch the exception and avoid exiting"]
+              },
+        {
+          "tag": "TypeError",
+          "patterns": [
+            "TypeError",
+            "What's TypeError in python",
+            "How can i solve TypeError",
+            "Why TypeError arise",
+            "TypeError happen"
+          ],
+          "responses": [
+            "TypeError raise when concatenate the wrong type of objects, or calling a function with the wrong type of object"
+          ]
+        },
+        {"tag": "UnboundLocalError",
+               "patterns": ["UnboundLocalError","What's UnboundLocalError in python", "How can i solve UnboundLocal Error", "Why UnboundLocalError arise","UnboundLocalError happen"],
+               "responses": ["UnboundLocalError raise when a reference is made to a local variable in a function or method, but no value has been bound to that variable"]
+        },
+        {"tag": "UnboundLocalError",
+               "patterns": ["UnboundLocalError","What's UnboundLocalError in python", "How can i solve UnboundLocal Error", "Why UnboundLocalError arise","UnboundLocalError happen"],
+               "responses": ["UnboundLocalError raise when a reference is made to a local variable in a function or method, but no value has been bound to that variable"]
+        },
+        {"tag": "UnicodeError",
+               "patterns": ["UnicodeError","What's UnicodeError in python", "How can i solve Unicode Error", "Why UnicodeError arise","UnicodeError happen"],
+               "responses": ["UnicodeError is subclass of ValueError, its raise when a function receives a value that has the right type but an invalid value"]
+        },
+        {"tag": "ValueError",
+               "patterns": ["ValueError","What's ValueError in python", "How can i solve Value Error", "Why ValueError arise","ValueError happen"],
+               "responses": ["ValueError is raise when a function receives a value that has the right type but an invalid value"]
+        },
+        {"tag": "ZeroDivisionError",
+               "patterns": ["ZeroDivisionError","What's ZeroDivisionError in python", "How can i solve ZeroDivision Error", "Why ZeroDivisionError arise","ZeroDivisionError happen"],
+               "responses": ["ZeroDivisionError is one of the logical Error in python, and its raise when try to divide a number by zero. Eg: print(230/0)"]
+        }
+
+
+
+]}
